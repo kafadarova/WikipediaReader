@@ -31,7 +31,6 @@ app.get('/result', (req, res) => {
   };
 
   const url = `https://de.wikipedia.org/w/api.php?${querystring.stringify(options)}`;
-  // console.log(url);
 
   const httpRequest = https.request(url, (httpResponse) => {
     httpResponse.setEncoding('utf8');
@@ -53,9 +52,3 @@ app.get('/result', (req, res) => {
 });
 
 app.listen(8080);
-
-
-// https://www.mediawiki.org/wiki/API:Main_page
-//
-// Fertig ausgefüllt mit Suchanfrage „München“:
-// https://de.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrlimit=10&pilimit=10&pithumbsize=500&prop=extracts|pageimages&exintro=1&exsentences=10&exlimit=max&gsrsearch=M%C3%BCnchen
