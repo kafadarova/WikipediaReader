@@ -1,0 +1,13 @@
+.photo {
+  float: left;
+  max-width: 150px;
+  margin-right: 15px;
+}
+.input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border  {
+    border: 1px solid #ffca28;
+}

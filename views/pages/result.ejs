@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+<!-- <%= result %> -->
+
+<% for(var key in response.query.pages) { %>
+  <% if(response.query.pages.hasOwnProperty(key)) { %>
+    <% var value = response.query.pages[key] %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= value.title %>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <% if (value.thumbnail) {%>
+          <img src="<%= value.thumbnail.source %>" class="photo">
+        <% } %>
+
+        <%- value.extract %>
+        <!-- <% console.log(value) %> -->
+      </div>
+    </div>
+  <% } %>
+<% } %>
+
+<% include ../partials/footer %>
