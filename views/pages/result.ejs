@@ -1,10 +1,8 @@
 <% include ../partials/header %>
 
-<!-- <%= result %> -->
-
-<% for(var key in response.query.pages) { %>
+<% for(const key in response.query.pages) { %>
   <% if(response.query.pages.hasOwnProperty(key)) { %>
-    <% var value = response.query.pages[key] %>
+    <% const value = response.query.pages[key] %>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
